@@ -1,13 +1,13 @@
 <template>
-  <div class="game-runner">
-    <div class="top-bar">
-      <button @click="exit">Exit</button>
-      <div v-if="!result" class="timer">
+  <div class="relative h-screen overflow-hidden">
+    <div class="absolute top-2 left-2 right-2 z-10 flex items-center gap-2">
+      <button class="btn-secondary" @click="exit">Exit</button>
+      <div v-if="!result" class="ml-auto panel px-3 py-1 rounded-md">
         {{ Math.ceil(remainingMs / 1000) }}s
       </div>
-      <div v-else class="result">
-        Winner: <strong>{{ winnerNames }}</strong>
-        <button @click="restart">Again</button>
+      <div v-else class="ml-auto panel px-3 py-1 rounded-md flex items-center gap-2">
+        <span>Winner: <strong class="text-accent">{{ winnerNames }}</strong></span>
+        <button class="btn" @click="restart">Again</button>
       </div>
     </div>
     <component
