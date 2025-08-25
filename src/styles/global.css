@@ -1,0 +1,13 @@
+:root {
+    --accent: #ffcc33;
+    --danger: #ff4d4f;
+    --ok: #4caf50;
+    --panel-bg: rgba(255,255,255,0.06);
+    --panel-border: rgba(255,255,255,0.15);
+}
+* { box-sizing: border-box; }
+body, html, #app { margin: 0; padding: 0; }
+button {
+    cursor: pointer;
+    font: inherit;
+}
