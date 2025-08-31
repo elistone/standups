@@ -5,12 +5,24 @@ import en from './locales/en.json';
 
 // Detect initial locale
 function detectLocale(): string {
+    const available = availableLocales();
     const saved = localStorage.getItem('app.locale');
     if (saved) return saved;
     const nav = navigator.language || 'en';
     // Map e.g. 'en-GB' -> 'en'
     const short = nav.split('-')[0];
-    return ['en', 'es', 'fr'].includes(short) ? short : 'en';
+    return available.includes(short) ? short : 'en';
+}
+
+export function availableLocales(): string[] {
+    return ['en', 'es', 'fr', 'de'];
+}
+
+export function localeIcon(locale: string): string {
+    if (!availableLocales().includes(locale)) locale = 'en';
+    if (locale === 'en') locale = 'gb'; // Use UK flag for English
+
+    return `https://flagcdn.com/${locale}.svg`;
 }
 
 export const i18n = createI18n({

@@ -1,6 +1,5 @@
 <template>
   <section>
-    <LanguageSelector />
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{{ t('app.title') }}</h2>
@@ -38,7 +37,6 @@
 import {listGames} from '../../games/core/registry';
 import {useRouter} from 'vue-router';
 import {useConfigStore} from '../../stores/config';
-import LanguageSelector from '../i18n/LanguageSelector.vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();

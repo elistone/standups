@@ -1,0 +1,13 @@
+{
+  "app": {
+    "title": "Standup Spaß",
+    "intro": "Willkommen bei Standup Spaß! Diese App hilft Ihnen, Ihre Standup-Meetings unterhaltsamer und angenehmer zu gestalten."
+  },
+  "language": {
+    "label": "Sprache",
+    "en": "Englisch",
+    "es": "Spanisch",
+    "fr": "Französisch",
+    "de": "Deutsch"
+  }
+}
