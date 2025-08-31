@@ -1,0 +1,12 @@
+{
+  "app": {
+    "title": "Diversión de Standup",
+    "intro": "¡Bienvenido a Diversión de Standup! Esta aplicación te ayuda a hacer que tus reuniones de pie sean más atractivas y agradables."
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "Inglés",
+    "es": "Español",
+    "fr": "Francés"
+  }
+}

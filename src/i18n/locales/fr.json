@@ -1,0 +1,12 @@
+{
+  "app": {
+    "title": "Standup Fun",
+    "intro": "Bienvenue sur Standup Fun ! Cette application vous aide à rendre vos réunions debout plus engageantes et agréables."
+  },
+  "language": {
+    "label": "Langue",
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français"
+  }
+}

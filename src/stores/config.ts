@@ -5,7 +5,8 @@ export const useConfigStore = defineStore('config', {
         selectedGameId: '' as string,
         playerCount: 4,
         playerNames: [] as string[],
-        durationSeconds: 12
+        durationSeconds: 12,
+        language: 'en'
     }),
     actions: {
         setGame(id: string) { this.selectedGameId = id; },
@@ -22,6 +23,9 @@ export const useConfigStore = defineStore('config', {
             if (this.playerNames.length > this.playerCount) {
                 this.playerNames.length = this.playerCount;
             }
+        },
+        setLanguage(lang: string) {
+            this.language = lang;
         }
     }
 });

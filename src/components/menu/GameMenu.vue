@@ -1,10 +1,10 @@
 <template>
   <section>
+    <LanguageSelector />
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Standup Games</h2>
-        <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Some fun little standup games to end the
-          meeting.</p>
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{{ t('app.title') }}</h2>
+        <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">{{ t('app.intro') }}</p>
       </div>
       <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
         <!-- Card -->
@@ -38,7 +38,10 @@
 import {listGames} from '../../games/core/registry';
 import {useRouter} from 'vue-router';
 import {useConfigStore} from '../../stores/config';
+import LanguageSelector from '../i18n/LanguageSelector.vue';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 const games = listGames();
 const router = useRouter();
 const config = useConfigStore();
